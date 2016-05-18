@@ -1,0 +1,50 @@
+@import "settings";
+
+.header {
+  background-color: $white;
+  height: 69px;
+  position: relative;
+
+  &::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 100px 100px 0 100px;
+    border-color: $white transparent transparent transparent;
+    position: absolute;
+    right: 10%;
+top: 69px;
+  }
+}
+
+.logo {
+  margin-top: 5px;
+}
+
+.menu-container ul {
+  text-transform: uppercase;
+
+  li {
+    cursor: pointer;
+    padding: 22px 10px;
+    height: 69px;
+    margin-left: 0;
+    display: block;
+
+    -webkit-transition: background-color 300ms, color 300ms;
+    transition: background-color 300ms, color 300ms;
+
+    a {
+      color: $primary-color;
+    }
+
+    &:hover {
+      background-color: $primary-color;
+    }
+
+    &:hover a {
+      color: $white;
+    }
+  }
+}

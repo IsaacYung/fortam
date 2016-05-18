@@ -1,0 +1,20 @@
+@import "settings";
+
+.billboard {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-image: image-url('billboard-image.jpg');
+  height: 45rem;
+  text-align: center;
+  padding-top: 16rem;
+
+  h1 {
+    color: $white;
+  }
+
+  .display {
+    padding: 10px;
+    background-color: rgba(46, 46, 46, 0.2);
+  }
+}

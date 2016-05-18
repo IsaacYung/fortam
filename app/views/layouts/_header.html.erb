@@ -1,3 +1,22 @@
 <header class="row full-width header">
-header
-</div>
+  <%
+    logo_img = image_tag('fortam-logo.png', alt: 'Logo Fortam')
+    logo = link_to logo_img, '/', class: 'logo-link'
+
+    @menu = [
+              (link_to 'Início', '#',        class: 'menu-item'),
+              (link_to 'Sobre Nós', '#', class: 'menu-item'),
+              (link_to 'Contato', '#',        class: 'menu-item'),
+              (link_to 'Trabalhe Conosco', '#',     class: 'menu-item')
+            ]
+  %>
+  <%=
+    content_tag(:div, logo, class: 'small-5 large-2 medium-3 columns logo text-right')
+  %>
+  <%=
+    content_tag(:button, nil, class: 'mobile-menu icon-th-menu show-for-small-only')
+  %>
+  <%=
+    menu 'inline-list', 'large-5 medium-8 columns menu-container hide-for-small-only'
+  %>
+</header>
