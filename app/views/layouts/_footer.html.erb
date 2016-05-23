@@ -1,3 +1,15 @@
 <footer class="row full-width footer">
-footer dsfsdfsdf
+  <%
+    logo_img = image_tag('fortam-logo.png', size: '250', alt: 'Logo EasyLimpe Branco')
+    logo = link_to logo_img, '/', class: 'logo-link-footer'
+  %>
+  <%=
+    content_tag(:div, logo, class: 'large-2 medium-3 columns logo-footer')
+  %>
+  <%=
+    menu 'footer-list', 'small-12 medium-3 columns menu-container-footer end'
+  %>
+  <%=
+    content_tag(:div, '© 2016 - Fortam Serviços e Terceirizações LTDA.', class: 'small-12 columns copyright text-center')
+  %>
 </footer>

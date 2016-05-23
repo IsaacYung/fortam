@@ -1,9 +1,10 @@
 @import "settings";
+@import "foundation_and_overrides";
 
 .header {
   background-color: $white;
-  height: 69px;
-  position: relative;
+  height: 76px;
+  position: fixed;
 
   &::after {
     content: '';
@@ -14,8 +15,14 @@
     border-color: $white transparent transparent transparent;
     position: absolute;
     right: 10%;
-top: 69px;
+    top: 76px;
+    @extend .hide-for-small-only;
   }
+}
+
+.logo-link {
+  display: block;
+  padding-top: 4px;
 }
 
 .logo {
@@ -27,8 +34,8 @@ top: 69px;
 
   li {
     cursor: pointer;
-    padding: 22px 10px;
-    height: 69px;
+    padding: 26px 10px;
+    height: 76px;
     margin-left: 0;
     display: block;
 
@@ -46,5 +53,36 @@ top: 69px;
     &:hover a {
       color: $white;
     }
+  }
+}
+
+.sidebar-menu {
+  position: absolute;
+  width: 80%;
+  max-width: 320px;
+  height: 50rem;
+  z-index: 1;
+  background-color: $white;
+  left: -90%;
+
+  -webkit-box-shadow: 3px 10px 23px -5px rgba(0,0,0,0.75);
+  -moz-box-shadow: 3px 10px 23px -5px rgba(0,0,0,0.75);
+  box-shadow: 3px 10px 23px -5px rgba(0,0,0,0.75);
+
+  -webkit-transition: left 500ms ease-in-out;
+  transition: left 500ms ease-in-out;
+
+  ul {
+    margin-left: 0;
+  }
+
+  .login-container {
+    position: static;
+    width: 100%;
+    padding: 0;
+  }
+
+  .menu-container {
+    padding: 0;
   }
 }

@@ -7,7 +7,7 @@
   background-image: image-url('billboard-image.jpg');
   height: 45rem;
   text-align: center;
-  padding-top: 16rem;
+  padding-top: 20rem;
 
   h1 {
     color: $white;
@@ -16,5 +16,136 @@
   .display {
     padding: 10px;
     background-color: rgba(46, 46, 46, 0.2);
+  }
+}
+
+.disclaimer-container {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position-x: 40%;
+  background-image: image-url('cameras.jpg');
+  background-color: #fff;
+  padding-bottom: 2rem;
+  text-shadow: 1px 1px 2px $black;
+  color: #fff;
+
+  h2 {
+    padding: 2rem 0;
+  }
+
+  p {
+    font-size: 20px;
+  }
+}
+
+.service-image {
+  height: 19rem;
+}
+
+.price-budget .item-center {
+
+}
+
+.price-budget .item-right {
+  -webkit-border-top-right-radius: 12px;
+  -webkit-border-bottom-right-radius: 12px;
+  -moz-border-radius-topright: 12px;
+  -moz-border-radius-bottomright: 12px;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.price-budget .item-left {
+  -webkit-border-top-left-radius: 12px;
+  -webkit-border-bottom-left-radius: 12px;
+  -moz-border-radius-topleft: 12px;
+  -moz-border-radius-bottomleft: 12px;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+
+.prices-table-container {
+  background-color: $primary-color;
+  padding: 3rem 0;
+}
+
+.prices-table {
+  color: $white;
+
+  .price:hover {
+    background-color: $black !important;
+    color: $white;
+  }
+
+  .price-budget {
+    padding: 0;
+    margin-left: 0;
+  }
+
+  .price-text {
+    padding: 25px;
+  }
+
+  .price-budget .price {
+    overflow: hidden;
+    padding: 0;
+    color: $white;
+    margin-left: 0;
+    list-style: none;
+    min-height: 22rem;
+    cursor: pointer;
+    background-color: #0060C3;
+
+    strong {
+      font-size: 30px;
+    }
+
+    li {
+      font-size: 14px;
+    }
+
+    span {
+      display: inline-block;
+      margin: 20px 0;
+    }
+
+    .disclaimer {
+      margin-left: 0;
+
+      li {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
+      }
+    }
+
+    .add {
+      margin-left: 51px;
+      text-align: left;
+    }
+  }
+}
+
+@media #{$small-only} {
+  .billboard {
+    height: 28rem;
+    padding-top: 12rem;
+  }
+
+  .disclaimer-container {
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .price-budget .price {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+  }
+
+  .item-center {
+    margin: 0 !important;
   }
 }
