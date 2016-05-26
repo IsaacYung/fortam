@@ -82,6 +82,7 @@ test:
 #
 production:
   <<: *default
-  database: Fortam_production
-  username: Fortam
-  password: <%= ENV['FORTAM_DATABASE_PASSWORD'] %>
+  host: pgsql.fortam.com.br
+  database: fortam
+  username: fortam
+  password: 15Lopi*070809
