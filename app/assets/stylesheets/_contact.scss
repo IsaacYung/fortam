@@ -1,10 +1,35 @@
 @import "settings";
 
-.contact {
-  background-color: $white;
-  padding: 5rem 0;
-}
+.contacts-container {
+  .contact {
+    background-color: $white;
+    padding: 5rem 0;
 
-.contact-info {
-  border-left: solid 1px gray;
+    h2 {
+      display: block;
+      padding: 1rem;
+    }
+  }
+
+  .contact-info {
+    color: darken($dark-gray, 25%);
+    font-size: 18px;
+
+    p {
+      padding: 8px 0 12px 15px;
+
+      &:hover {
+        background-color: lighten($light-gray, 5%);
+      }
+    }
+  }
+
+  .contact-form {
+    border-right: solid 1px $medium-gray;
+  }
+
+  .map {
+    background-color: $primary-color;
+    padding: 15px;
+  }
 }
