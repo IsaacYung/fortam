@@ -9,7 +9,6 @@ class GeneralController < ApplicationController
     @messenge.message = 'Vai que é tua'
 
     ContactMailer.contact_message
-    binding.pry
   end
 
   def about
