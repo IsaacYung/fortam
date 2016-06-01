@@ -15,7 +15,7 @@
 # gem 'pg'
 #
 default: &default
-  adapter: postgresql
+  adapter: mysql2
   encoding: unicode
   username: postgres
   password: root
@@ -82,7 +82,7 @@ test:
 #
 production:
   <<: *default
-  host: pgsql.fortam.com.br
+  host: mysql.fortam.com.br
   database: fortam
   username: fortam
-  password: 15Lopi*070809
+  password: fot15171816
