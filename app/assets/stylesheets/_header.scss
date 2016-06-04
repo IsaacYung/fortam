@@ -20,9 +20,19 @@
   }
 }
 
+.mobile-menu {
+  font-size: 40px;
+  padding: 1.1rem;
+  float: right;
+}
+
 .logo-link {
   display: block;
   padding-top: 4px;
+}
+
+.show-menu {
+  left: 0 !important;
 }
 
 .logo {
@@ -58,12 +68,11 @@
 }
 
 .sidebar-menu {
-  position: absolute;
+  position: fixed;
   width: 80%;
   max-width: 320px;
-  height: 50rem;
   z-index: 1;
-  background-color: $white;
+  background-color: $light-gray;
   left: -90%;
 
   -webkit-box-shadow: 3px 10px 23px -5px rgba(0,0,0,0.75);
@@ -85,5 +94,10 @@
 
   .menu-container {
     padding: 0;
+    background-color: $primary-color;
+
+    a {
+      color: $white;
+    }
   }
 }
