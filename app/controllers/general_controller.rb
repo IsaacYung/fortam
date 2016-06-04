@@ -3,9 +3,7 @@ class GeneralController < ApplicationController
   end
 
   def contact
-    @messenge = Message.new
-
-    ContactMailer.contact_message
+    @message = Message.new
   end
 
   def about

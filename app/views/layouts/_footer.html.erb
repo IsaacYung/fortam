@@ -2,12 +2,18 @@
   <%
     logo_img = image_tag('fortam-logo.png', size: '250', alt: 'Logo EasyLimpe Branco')
     logo = link_to logo_img, '/', class: 'logo-link-footer'
+
+    axels_img = image_tag('axels.png', size: '120', alt: 'Logo Axels', title: 'Axels - Creative Solutions')
+    axels = link_to axels_img, 'http://axels.in', class: 'logo-link-footer'
   %>
   <%=
     content_tag(:div, logo, class: 'large-2 medium-3 columns logo-footer')
   %>
   <%=
-    menu 'footer-list', 'small-12 medium-3 columns menu-container-footer end'
+    menu 'footer-list', 'small-12 medium-3 columns menu-container-footer'
+  %>
+  <%=
+    content_tag(:div, axels, class: 'large-2 medium-3 columns axels')
   %>
   <%=
     content_tag(:div, '© 2016 - Fortam Serviços e Terceirizações LTDA.', class: 'small-12 columns copyright text-center')
