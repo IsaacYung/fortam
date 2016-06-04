@@ -16,8 +16,7 @@
 #
 default: &default
   adapter: mysql2
-  encoding: unicode
-  username: postgres
+  username: root
   password: root
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
@@ -86,3 +85,4 @@ production:
   database: fortam
   username: fortam
   password: fot15171816
+  socket: /tmp/mysql.sock
