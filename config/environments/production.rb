@@ -56,7 +56,7 @@ Rails.application.configure do
 
   # Use a different cache store in production.
   config.cache_store = :memory_store, {
-    expires_in: 1.hour, race_condition_ttl: 10.second
+    expires_in: 6.hour, race_condition_ttl: 10.second
   }
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
