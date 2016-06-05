@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'fortam_font';
-  src:    url('fortam_font.eot?wozd4n');
-  src:    url('fortam_font.eot?wozd4n#iefix') format('embedded-opentype'),
-      url('fortam_font.ttf?wozd4n') format('truetype'),
-      url('fortam_font.woff?wozd4n') format('woff'),
-      url('fortam_font#fortam_font') format('svg');
+  src:    url(asset-path('fortam_font.eot?wozd4n'));
+  src:    url(asset-path('fortam_font.eot?wozd4n#iefix')) format('embedded-opentype'),
+      url(asset-path('fortam_font.ttf?wozd4n')) format('truetype'),
+      url(asset-path('fortam_font.woff?wozd4n')) format('woff'),
+      url(asset-path('fortam_font#fortam_font')) format('svg');
   font-weight: normal;
   font-style: normal;
 }
