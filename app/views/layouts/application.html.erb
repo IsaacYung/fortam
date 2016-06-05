@@ -6,22 +6,18 @@
     <title><%= content_for?(:title) ? yield(:title) + ' | Fortam' : 'Fortam' %></title>
     <meta name="description" content="A Fortam Serviços e Terceirizações oferece profissionais para as suas necessidades, limpeza e conservação, portaria, controle de acesso, recrutamento, mão de obra terceirizada  <%= content_for?(:title) ? '- ' + yield(:title) : '' %>">
     <%= favicon_link_tag 'favicon.ico' %>
-    <% cache('layouts/header') do  %>
+    <% cache('application.css') do  %>
       <%= stylesheet_link_tag "application" %>
     <% end %>
     <%= csrf_meta_tags %>
   </head>
 
   <body>
-    <% cache('layouts/header') do  %>
-      <%= render 'layouts/header' %>
-    <% end %>
+    <%= render 'layouts/header' %>
       <div class="content">
         <%= yield %>
       </div>
-    <% cache('layouts/footer') do  %>
       <%= render 'layouts/footer' %>
-    <% end %>
 
     <% cache('application.js') do %>
       <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
