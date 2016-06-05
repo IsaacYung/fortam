@@ -2,7 +2,12 @@
 @import "foundation_and_overrides";
 
 .header {
-  background-color: $white;
+  -webkit-transition: background-color 500ms ease-out 300ms;
+  -moz-transition: background-color 500ms ease-out 300ms;
+  -o-transition: background-color 500ms ease-out 300ms;
+  transition: background-color 500ms ease-out 300ms;
+
+  background-color: rgba(255, 255, 255, 0.7);
   height: 76px;
   position: fixed;
 
@@ -12,7 +17,7 @@
     height: 0;
     border-style: solid;
     border-width: 60px 60px 0 60px;
-    border-color: $white transparent transparent transparent;
+    border-color: rgba(255, 255, 255, 0.7) transparent transparent transparent;
     position: absolute;
     right: 10%;
     top: 76px;
@@ -20,9 +25,21 @@
   }
 }
 
+.on-top {
+  background-color: rgba(255, 255, 255, 1)  !important;
+  &::after {
+    border-color: rgba(255, 255, 255, 1) transparent transparent transparent !important;
+  }
+}
+
+.mobile-logo {
+  margin-bottom: 8px;
+}
+
 .mobile-menu {
   font-size: 40px;
   padding: 1.1rem;
+  color: $primary-color;
   float: right;
 }
 

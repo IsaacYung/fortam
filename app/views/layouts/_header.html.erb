@@ -1,4 +1,4 @@
-<header class="row full-width header">
+<header class="row full-width header on-top">
   <%
     logo_img = image_tag('fortam-logo.png', alt: 'Logo Fortam')
     logo = link_to logo_img, '/', class: 'logo-link'
@@ -22,7 +22,7 @@
 </header>
 <div class="sidebar-menu show-for-small-only">
   <%=
-    content_tag(:div, logo, class: 'small-12 large-push large-2 medium-3 columns logo text-center')
+    content_tag(:div, logo, class: 'small-12 large-push large-2 medium-3 columns logo mobile-logo text-center')
   %>
   <%=
     menu 'text-center', 'large-6 medium-5 columns menu-container'
