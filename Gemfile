@@ -14,6 +14,8 @@ gem 'coffee-rails', '~> 4.1.0'
 
 gem 'mysql2'
 
+gem 'redis-store', '~> 1.0.0'
+
 gem 'pg'
 
 gem 'foundation-rails'
