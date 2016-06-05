@@ -13,6 +13,10 @@
 
   &::after {
     content: '';
+    -webkit-transition: border-color 500ms ease-out 300ms;
+    -moz-transition: border-color 500ms ease-out 300ms;
+    -o-transition: border-color 500ms ease-out 300ms;
+    transition: border-color 500ms ease-out 300ms;
     width: 0;
     height: 0;
     border-style: solid;

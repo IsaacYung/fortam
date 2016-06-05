@@ -7,14 +7,14 @@
     $title.animate({
       opacity: 1,
       padding: 0,
-    }, 600, 'swing');
+    }, 500, 'swing');
     $subtitle.animate({
       opacity: 1,
       padding: 0,
-    }, 1000, 'swing');
+    }, 900, 'swing');
     $display.animate({
       opacity: 1,
-    }, 1300, 'swing');
+    }, 800, 'swing');
   };
 
   $(document).ready(function() {
