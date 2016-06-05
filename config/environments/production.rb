@@ -55,7 +55,7 @@ Rails.application.configure do
   # config.logger = ActiveSupport::TaggedLogging.new(SyslogLogger.new)
 
   # Use a different cache store in production.
-  config.cache_store = :mem_cache_store. {
+  config.cache_store = :mem_cache_store, {
     expires_in: 1.hour, race_condition_ttl: 10.second
   }
 
