@@ -4,18 +4,27 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%= content_for?(:title) ? yield(:title) + ' | Fortam' : 'Fortam' %></title>
+    <meta name="description" content="A Fortam Serviços e Terceirizações oferece profissionais para as suas necessidades, limpeza e conservação, portaria, controle de acesso, recrutamento, mão de obra terceirizada  <%= content_for?(:title) ? '- ' + yield(:title) : '' %>">
     <%= favicon_link_tag 'favicon.ico' %>
-    <%= stylesheet_link_tag    "application" %>
+    <% cache('layouts/header') do  %>
+      <%= stylesheet_link_tag "application" %>
+    <% end %>
     <%= csrf_meta_tags %>
   </head>
 
   <body>
-    <%= render 'layouts/header' %>
+    <% cache('layouts/header') do  %>
+      <%= render 'layouts/header' %>
+    <% end %>
       <div class="content">
         <%= yield %>
       </div>
-    <%= render 'layouts/footer' %>
+    <% cache('layouts/footer') do  %>
+      <%= render 'layouts/footer' %>
+    <% end %>
 
-    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <% cache('application.js') do %>
+      <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <% end %>
   </body>
 </html>

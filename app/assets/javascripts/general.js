@@ -1,5 +1,4 @@
 (function(global, $){
-  console.log('aquii');
   $('.mobile-menu').click(function(){
     $('.sidebar-menu').toggleClass('show-menu');
     $('.content').toggleClass('darker-content');
