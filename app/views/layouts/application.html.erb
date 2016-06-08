@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%= content_for?(:title) ? yield(:title) + ' | Fortam' : 'Fortam - Serviços e Terceirizações' %></title>
     <meta name="description" content="A Fortam oferece profissionais para as suas necessidades, limpeza, conservação, eventos, portaria. Acesse  <%= content_for?(:title) ? '- ' + yield(:title) : '' %>">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="Fortam">
     <meta property="og:title" content="<%= content_for?(:title) ? yield(:title) + ' | Fortam' : 'Fortam - Serviços e Terceirizações' %>">
-    <meta property="og:image" content="<%= image_url('postfortam.jpg') %>">
+    <meta property="og:description" content="A Fortam oferece profissionais para as suas necessidades, limpeza, conservação, eventos, portaria. Clique no post e acesse nosso site.">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="800">
     <meta property="og:image:height" content="600">
-    <meta property="og:site_name" content="Fortam">
-    <meta property="og:description" content="A Fortam oferece profissionais para as suas necessidades, limpeza, conservação, eventos, portaria. Clique no post e acesse nosso site.">
-    <meta property="og:locale" content="pt_BR">
+    <meta property="og:image" content="<%= image_url('postfortam.jpg') %>">
     <%= favicon_link_tag 'favicon.ico' %>
     <% cache('application.css') do  %>
       <%= stylesheet_link_tag "application" %>
