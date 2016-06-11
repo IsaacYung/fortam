@@ -45,7 +45,7 @@ Rails.application.configure do
     :user_name            => 'comercial@fortam.com.br',
     :password             => 'mudar12310',
     :authentication       => :plain,
-    :enable_starttls_auto => true
+    :enable_starttls_auto => false
   }
 
   # Raises error for missing translations
