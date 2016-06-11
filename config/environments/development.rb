@@ -39,7 +39,7 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    :address              => 'smtpi.fortam.com.br',
+    :address              => 'smtp.fortam.com.br',
     :port                 => 587,
     :domain               => 'fortam.com.br',
     :user_name            => 'comercial@fortam.com.br',
