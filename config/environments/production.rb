@@ -45,8 +45,8 @@ Rails.application.configure do
     :user_name            => 'comercial@fortam.com.br',
     :password             => 'mudar12310',
     :authentication       => :plain,
-    :enable_starttls_auto => false
-    :openssl_verify_mode => 'none'
+    :enable_starttls_auto => false,
+    :openssl_verify_mode  => 'none'
   }
 
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
