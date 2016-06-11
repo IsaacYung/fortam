@@ -2,7 +2,7 @@
   <div class="text-right small-12 medium-2 columns">
   </div>
   <div class="small-12 medium-8 columns">
-    <form class="" action="/" method="post">
+    <!-- <form class="" action="/update" method="post">
       <label for="name">Nome:</label>
       <input type="text" placeholder="Seu nome" name="name" value="">
       <label for="email">E-Mail:</label>
@@ -10,6 +10,9 @@
       <label for="area">Mensagem:</label>
       <textarea name="area" placeholder="Sua mensagem" rows="8" cols="40"></textarea>
       <input type="submit" class="button" name="name" value="Enviar">
-    </form>
+    </form> -->
+    <%= form_for @message do |f| %>
+      <%= f.text_field :field_1, class: "form-control" %>
+    <% end %>
   </div>
 </div>

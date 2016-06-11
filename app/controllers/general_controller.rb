@@ -8,4 +8,7 @@ class GeneralController < ApplicationController
 
   def about
   end
+
+  def update
+  end
 end
