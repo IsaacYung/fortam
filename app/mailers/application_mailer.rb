@@ -1,3 +1,3 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'isaac@fortam.com.br'
+  default from: 'comercial@fortam.com.br'
 end
