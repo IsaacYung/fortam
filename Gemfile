@@ -14,6 +14,8 @@ gem 'coffee-rails', '~> 4.1.0'
 
 gem 'mysql2'
 
+gem 'browser'
+
 gem 'pg'
 
 gem 'foundation-rails'

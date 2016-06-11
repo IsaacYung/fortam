@@ -9,6 +9,20 @@ class GeneralController < ApplicationController
   def about
   end
 
-  def update
+  def create
+    @message = Message.new(message_params)
+    @message.name = @message.name.capitalize
+
+    browser = Browser.new("Some User Agent", accept_language: "pt-br")
+    ContactMailer.contact(@message, request, browser).deliver
+
+    congratulation = 'Obrigado ' + @message.name.partition(' ').first + ', mensagem enviada'
+    respond_to do |format|
+      format.html { redirect_to contatos_url, notice: congratulation }
+    end
+  end
+
+  def message_params
+    params.require(:message).permit(:name, :email, :message)
   end
 end

@@ -24,6 +24,7 @@ Style/Documentation:
   Exclude:
     - 'spec/**/*'
     - 'test/**/*'
+    - 'db/schema.rb'
     - 'config/application.rb'
     - 'db/migrate/20160529015457_create_messages.rb'
   Enabled: false

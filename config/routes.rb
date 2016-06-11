@@ -5,5 +5,5 @@ Rails.application.routes.draw do
 
   get 'contatos', to: 'general#contact'
   get 'sobre-nos', to: 'general#about'
-  post 'messages', to: 'general#messages'
+  post 'contatos', to: 'general#create', as: :messages
 end
