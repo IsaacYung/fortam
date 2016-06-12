@@ -12,7 +12,6 @@ class ContactMailer < ApplicationMailer
     @worker = worker
     @request_parms = request_parms
     @date = Time.now.strftime("%d/%m/%Y %H:%M:%S %Z")
-
     mail(to: 'rh@fortam.com.br', subject: 'Currículo | ' + @worker.first_name)
   end
 end
