@@ -42,8 +42,8 @@ Rails.application.configure do
     :address              => 'smtp.fortam.com.br',
     :port                 => 587,
     :domain               => 'fortam.com.br',
-    :user_name            => 'comercial@fortam.com.br',
-    :password             => 'mudar12310',
+    :user_name            => 'site@fortam.com.br',
+    :password             => 'Pg28azqw',
     :authentication       => :plain,
     :enable_starttls_auto => false,
     :openssl_verify_mode  => 'none'
