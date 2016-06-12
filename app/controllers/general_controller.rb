@@ -12,7 +12,7 @@ class GeneralController < ApplicationController
   def create
     @message = Message.new(message_params)
     @message.name = @message.name.capitalize
-  
+
     ContactMailer.contact(@message, request, browser).deliver
 
     congratulation = 'Obrigado ' + @message.name.partition(' ').first + ', mensagem enviada'

@@ -1,6 +1,7 @@
 class ContactMailer < ApplicationMailer
   def contact(client, request_parms, browser_client)
     @browser_client = browser_client
+    binding.pry
     @client = client
     @request_parms = request_parms
     @date = Time.now.strftime("%d/%m/%Y %H:%M:%S %Z")
