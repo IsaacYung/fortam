@@ -12,10 +12,14 @@
 </url>
 <url>
   <loc>http://www.fortam.com.br/sobre-nos</loc>
-  <changefreq>daily</changefreq>
+  <changefreq>weekly</changefreq>
 </url>
 <url>
   <loc>http://www.fortam.com.br/contatos</loc>
-  <changefreq>daily</changefreq>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://www.fortam.com.br/trabalhe-conosco</loc>
+  <changefreq>weekly</changefreq>
 </url>
 </urlset>
