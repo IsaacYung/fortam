@@ -1,0 +1,71 @@
+<div class="work-form small-12 medium-12 columns row">
+  <div class="small-12 medium-10 columns medium-centered">
+    <% if flash[:notice] %>
+      <div class="notice text-center">
+        <%= image_tag('sent.jpg', alt: 'Enviado') %><br>
+        <%= flash[:notice] %>
+      </div>
+    <% else %>
+      <%= form_for @work do |f| %>
+        <div class="field medium-4 columns">
+          <%= f.label :first_name, 'Nome' %>
+          <%= f.text_field :first_name %>
+        </div>
+        <div class="field medium-5 columns">
+          <%= f.label :last_name, 'Sobre nome' %>
+          <%= f.text_field :last_name %>
+        </div>
+        <div class="field radio medium-3 columns">
+          <%= f.label :sex_masculino, 'Masculino' %>
+          <%= f.radio_button :sex, 'Masculino' %>
+          <%= f.label :sex_feminino, 'Feminino' %>
+          <%= f.radio_button :sex, 'Feminino' %>
+        </div>
+        <div class="field medium-6 columns">
+          <%= f.label :email, 'E-mail' %>
+          <%= f.text_field :email %>
+        </div>
+        <div class="field medium-3 columns">
+          <%= f.label :phone, 'Telefone' %>
+          <%= f.text_field :phone %>
+        </div>
+        <div class="field medium-3 columns">
+          <%= f.label :height, 'Altura' %>
+          <%= f.text_field :height %>
+        </div>
+        <div class="field medium-4 columns">
+          <%= f.label :city, 'Cidade/Região' %>
+          <%= f.text_field :city %>
+        </div>
+        <div class="field medium-3 columns">
+          <%= f.label :age, 'Idade' %>
+          <%= f.text_field :age %>
+        </div>
+        <div class="field medium-5 columns">
+          <%
+            options = [
+              'Escolha a área',
+              'Limpeza',
+              'Seguraça',
+              'Zeladoria',
+              'Portaria',
+              'Secretaria',
+              'Outras'
+            ]
+          %>
+          <%= f.label :work_area, 'Área de Trabalho' %>
+          <%= f.select :work_area, options %>
+        </div>
+        <div class="field medium-12 columns">
+          <%= f.label :curriculum_path, 'Currículo' %>
+          <%= f.file_field :curriculum_path, class: 'button'%>
+        </div>
+        <div class="actions">
+          <div class="medium-12 columns">
+            <%= f.submit 'Enviar', class: 'button' %>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>

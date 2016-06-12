@@ -4,7 +4,15 @@ class ContactMailer < ApplicationMailer
     @client = client
     @request_parms = request_parms
     @date = Time.now.strftime("%d/%m/%Y %H:%M:%S %Z")
-    @url = 'www.fortam.com.br'
-    mail(to: 'comercial@fortam.com.br', subject: 'Fortam | ' + @client.name)
+    mail(to: 'comercial@fortam.com.br', subject: 'Contato | ' + @client.name)
+  end
+
+  def work(worker, request_parms, browser_worker)
+    @browser_worker = browser_worker
+    @worker = worker
+    @request_parms = request_parms
+    @date = Time.now.strftime("%d/%m/%Y %H:%M:%S %Z")
+
+    mail(to: 'rh@fortam.com.br', subject: 'Currículo | ' + @worker.first_name)
   end
 end
