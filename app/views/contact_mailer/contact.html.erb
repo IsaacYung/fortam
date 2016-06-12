@@ -733,9 +733,9 @@
 																<hr>
 																Enviado em: <%= @date %><br>
 																IP: <%= @request_parms.remote_ip %><br>
-																Navegador: <%= @browser_client.name @browser_client.version%><br>
+																Navegador: <%= @browser_client.name  + ' ' +  @browser_client.version%><br>
 																Dispositivo: <%= @browser_client.device.name %><br>
-																Plataforma: <%= @browser_client.platform.name @browser_client.platform.version%><br>
+																Plataforma: <%= @browser_client.platform.name + ' ' + @browser_client.platform.version%><br>
 															</td>
 														</tr>
 													</tbody>
