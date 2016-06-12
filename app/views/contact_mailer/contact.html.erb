@@ -667,7 +667,7 @@
 													<tbody>
 														<tr>
 															<td class="mcnImageContent" valign="top" style="padding-right: 9px; padding-left: 9px; padding-top: 0; padding-bottom: 0; text-align:center;">
-																<img align="center" alt="" src="<%= image_tag('fortam-logo.png', alt: 'Logo Fortam') %>" width="202" style="max-width:202px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="mcnImage">
+																<img align="center" alt="" src="http://www.fortam.com.br/assets/fortam-logo-9f5494e696314bbf3f2ed6b5d748b58de523818c1c4329a5f15f90337751a0e2.png" width="202" style="max-width:202px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="mcnImage">
 															</td>
 														</tr>
 													</tbody>
@@ -730,11 +730,12 @@
 														<tr>
 
 															<td valign="top" class="mcnTextContent" style="padding-top:0; padding-right:18px; padding-bottom:9px; padding-left:18px;">
-																<hr>Enviado em: <%= @date %><br>
+																<hr>
+																Enviado em: <%= @date %><br>
 																IP: <%= @request_parms.remote_ip %><br>
-																Navegador: <%= @browser_client.name %><br>
+																Navegador: <%= @browser_client.name @browser_client.version%><br>
 																Dispositivo: <%= @browser_client.device.name %><br>
-																Plataforma: <%= @browser_client.platform.name %><br>
+																Plataforma: <%= @browser_client.platform.name @browser_client.platform.version%><br>
 															</td>
 														</tr>
 													</tbody>
