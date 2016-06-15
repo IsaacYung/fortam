@@ -1,0 +1,36 @@
+(function(global, $){
+  $.fn.workForm = function() {
+    var $notice = this.find('.notice'),
+        $form   = this.find('.form'),
+        $noticeText = this.find('.text'),
+        $fields = this.find('input[type=text], textarea, option, input[type=file], input[type=radio]');
+
+    $noticeText.html("<h3><%= 'Obrigado ' + @work.first_name.capitalize + ', pelo interesse' %></h3>")
+    $form.animate({
+      opacity: 0
+    }, 500, 'swing',function(){
+      $fields.val('');
+      $notice.animate({
+        opacity: 1,
+        height: 'auto',
+        paddingTop: '25px'
+      }, 500, 'swing',function(){
+        setTimeout(function(){
+          $notice.animate({
+            opacity: 0,
+            height: 0,
+            paddingTop: 0
+          }, 600, 'swing',function(){
+            $form.animate({
+              opacity: 1
+            }, 500, 'swing');
+          });
+        }, 3000);
+      });
+    });
+  };
+
+  $(document).ready(function() {
+    $('.work-form').workForm();
+  });
+})(window, jQuery);

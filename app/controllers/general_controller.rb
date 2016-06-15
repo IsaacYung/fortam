@@ -18,10 +18,10 @@ class GeneralController < ApplicationController
 
     ContactMailer.work(@work, request, browser).deliver
 
-    congratulation = 'Obrigado ' + @work.first_name + ', pelo interesse'
     if @work.save
       respond_to do |format|
         format.html { redirect_to work_us_url, notice: congratulation }
+        format.js {}
       end
     end
   end
