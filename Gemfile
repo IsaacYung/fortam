@@ -8,7 +8,7 @@ gem 'sass-rails'
 # # Use Uglifier as compressor for JavaScript assets
 # gem 'uglifier'
 # Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails'
+# gem 'coffee-rails'
 
 gem 'sqlite3'
 # See https://github.com/rails/execjs#readme for more supported runtimes
