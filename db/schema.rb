@@ -14,27 +14,27 @@
 ActiveRecord::Schema.define(version: 20160612061659) do
 
   create_table "messages", force: :cascade do |t|
-    t.string   "name",       limit: 255
-    t.string   "email",      limit: 255
-    t.string   "message",    limit: 255
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.string   "name"
+    t.string   "email"
+    t.string   "message"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "works", force: :cascade do |t|
-    t.string   "first_name",      limit: 255
-    t.string   "last_name",       limit: 255
-    t.float    "height",          limit: 24
-    t.string   "city",            limit: 255
-    t.string   "work_area",       limit: 255
-    t.binary   "curriculum",      limit: 65535
-    t.string   "curriculum_path", limit: 255
-    t.integer  "age",             limit: 4
-    t.string   "email",           limit: 255
-    t.string   "phone",           limit: 255
-    t.string   "sex",             limit: 255
-    t.datetime "created_at",                    null: false
-    t.datetime "updated_at",                    null: false
+    t.string   "first_name"
+    t.string   "last_name"
+    t.float    "height"
+    t.string   "city"
+    t.string   "work_area"
+    t.binary   "curriculum"
+    t.string   "curriculum_path"
+    t.integer  "age"
+    t.string   "email"
+    t.string   "phone"
+    t.string   "sex"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
 end
